@@ -1,4 +1,5 @@
 Happy Easter 🐣🌷
+
 Para visualizar la página web, simplemente abre el archivo index.html en tu navegador web preferido. Asegúrate de tener una conexión a Internet activa para cargar los recursos necesarios, como imágenes y estilos CSS.
 
 bash
