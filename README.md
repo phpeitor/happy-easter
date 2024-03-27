@@ -7,4 +7,6 @@ Para visualizar la página web, simplemente abre el archivo index.html en tu nav
 
 Esta página web fue inspirada por el deseo de celebrar la festividad de Pascua de una manera creativa y significativa. Esperamos que disfrutes de la experiencia y te deseamos una ¡Feliz Pascua!
 
-![](https://metadata.com.pe/images/works/happy_easter.png)
+
+[![Video](https://img.youtube.com/vi/vGhcgaP0TcI/0.jpg)](https://www.youtube.com/watch?v=vGhcgaP0TcI)  
+[Ver demo](https://www.youtube.com/watch?v=vGhcgaP0TcI)
