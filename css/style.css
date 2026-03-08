@@ -3,6 +3,9 @@ body {
   height: 100%;
   background: LightBlue;
   overflow: hidden;
+  background-image: url('../img/the-sky.gif'); 
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .theman {
   z-index: 9;
