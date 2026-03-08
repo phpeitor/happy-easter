@@ -1115,6 +1115,94 @@ div.halo {
   filter: drop-shadow(0 0 10px rgba(227, 186, 232, 0.75));
 }
 
+/* ===================== Chat 7 palabras ===================== */
+.jesus-chat {
+  position: fixed;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 480px;
+  max-width: 92vw;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.28);
+  z-index: 50;
+  overflow: hidden;
+}
+.jesus-chat__header {
+  background: linear-gradient(90deg, rgba(160,100,0,0.82), rgba(210,160,30,0.82));
+  color: #fff8e1;
+  text-align: center;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+  padding: 8px 12px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+}
+.jesus-chat__body {
+  padding: 14px 18px;
+  min-height: 64px;
+  max-height: 180px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.jesus-chat__msg {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  animation: msgFadeIn 0.4s ease;
+}
+.jesus-chat__avatar {
+  font-size: 22px;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.jesus-chat__bubble {
+  background: rgba(255, 248, 220, 0.88);
+  border: 1px solid rgba(180, 130, 40, 0.35);
+  border-radius: 0 12px 12px 12px;
+  padding: 8px 13px;
+  font-size: 14px;
+  font-family: 'Georgia', serif;
+  color: #3a2000;
+  line-height: 1.55;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+  max-width: 380px;
+}
+.jesus-chat__ref {
+  font-size: 10px;
+  color: #9a6e20;
+  margin-top: 3px;
+  font-style: italic;
+}
+.jesus-chat__typing {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.jesus-chat__typing-bubble {
+  background: rgba(255, 248, 220, 0.88);
+  border: 1px solid rgba(180, 130, 40, 0.35);
+  border-radius: 0 12px 12px 12px;
+  padding: 8px 13px;
+  font-size: 14px;
+  font-family: 'Georgia', serif;
+  color: #3a2000;
+  line-height: 1.55;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+  min-width: 40px;
+}
+@keyframes msgFadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
 .logo:before {
   content: "";
   display: block;
