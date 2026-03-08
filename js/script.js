@@ -29,13 +29,13 @@ document.addEventListener("DOMContentLoaded", function() {
     new Typed('#paragraph', {
         strings: ["Feliz Semana Santa"],
         typeSpeed: 200,
-        cursorChar: "|",
+        showCursor: false,
         onComplete: function() {
-        new Typed('#paragraph2', {
-            strings: ["amvsoft.tech"],
-            typeSpeed: 150,
-            cursorChar: "*"
-        });
+            new Typed('#paragraph2', {
+                strings: ["amvsoft.tech"],
+                typeSpeed: 150,
+                cursorChar: "*"
+            });
         }
     });
   

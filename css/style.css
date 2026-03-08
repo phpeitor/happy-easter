@@ -13,12 +13,10 @@ body {
   top: 10%;
   width: 400px;
   margin-left: 30%;
-  -webkit-animation: float 5s infinite;
-  -moz-animation: float 5s infinite;
-  -o-animation: float 5s infinite;
-  -ms-animation: float 5s infinite;
-  animation: float 5s infinite;
-  -webkit-animation: float 5s infinite;
+  -webkit-animation: float 5s ease-in-out infinite, drift 10s ease-in-out infinite;
+  -moz-animation: float 5s ease-in-out infinite, drift 10s ease-in-out infinite;
+  -o-animation: float 5s ease-in-out infinite, drift 10s ease-in-out infinite;
+  animation: float 5s ease-in-out infinite, drift 10s ease-in-out infinite;
 }
 .head {
   z-index: 1;
@@ -986,6 +984,26 @@ div.halo {
   to {
     left: -300px;
   }
+}
+@-webkit-keyframes drift {
+  0%   { margin-left: 30%; }
+  50%  { margin-left: 20%; }
+  100% { margin-left: 30%; }
+}
+@-moz-keyframes drift {
+  0%   { margin-left: 30%; }
+  50%  { margin-left: 20%; }
+  100% { margin-left: 30%; }
+}
+@-o-keyframes drift {
+  0%   { margin-left: 30%; }
+  50%  { margin-left: 20%; }
+  100% { margin-left: 30%; }
+}
+@keyframes drift {
+  0%   { margin-left: 30%; }
+  50%  { margin-left: 20%; }
+  100% { margin-left: 30%; }
 }
 
 
