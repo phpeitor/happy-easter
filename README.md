@@ -6,7 +6,7 @@
 Landing estática temática de Semana Santa construida con HTML, CSS y JavaScript. El proyecto muestra una ilustración animada, texto tipográfico, un chat con las 7 palabras de Jesús en la cruz y una interacción de lightbox para el logo principal.
 
 [![Video](https://img.youtube.com/vi/vGhcgaP0TcI/0.jpg)](https://www.youtube.com/watch?v=vGhcgaP0TcI)
-[Ver demo](https://www.youtube.com/watch?v=vGhcgaP0TcI)
+[▶ Ver demo en YouTube](https://www.youtube.com/watch?v=vGhcgaP0TcI)
 
 ## Características
 
@@ -36,15 +36,7 @@ happy-easter/
 
 ## Cómo ejecutar el proyecto
 
-### Opción 1: Apache local
-
-Si estás trabajando en `htdocs`, abre el proyecto desde una URL local como:
-
-```text
-http://localhost/happy-easter/
-```
-
-### Opción 2: VS Code Live Server
+### Opción 1: VS Code Live Server
 
 1. Clona el repositorio:
 
@@ -65,7 +57,6 @@ Puedes abrir `index.html` en el navegador, aunque algunas interacciones y recurs
 - HTML5
 - CSS3
 - JavaScript
-- jQuery
 - Typed.js
 
 ## Release actual
