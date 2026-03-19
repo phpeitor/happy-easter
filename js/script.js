@@ -172,4 +172,99 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }());
 
+    // ===================== FX Widget =====================
+    (function () {
+        const rainBtn = document.getElementById('toggleRain');
+        const lightningBtn = document.getElementById('toggleLightning');
+        const darkBtn = document.getElementById('toggleDark');
+        const rainLayer = document.getElementById('rainLayer');
+        const lightningLayer = document.getElementById('lightningLayer');
+
+        if (!rainBtn || !lightningBtn || !darkBtn || !rainLayer || !lightningLayer) return;
+
+        let lightningTimeout = null;
+
+        function setButtonState(button, isActive) {
+            button.classList.toggle('is-active', isActive);
+            button.setAttribute('aria-pressed', String(isActive));
+        }
+
+        function buildRain() {
+            const dropCount = window.innerWidth <= 760 ? 55 : 90;
+            rainLayer.innerHTML = '';
+
+            for (let i = 0; i < dropCount; i++) {
+                const drop = document.createElement('span');
+                drop.className = 'rain-drop';
+                drop.style.left = Math.random() * 100 + '%';
+                drop.style.height = (12 + Math.random() * 16) + 'px';
+                drop.style.opacity = (0.22 + Math.random() * 0.7).toFixed(2);
+                drop.style.animationDuration = (0.58 + Math.random() * 0.72).toFixed(2) + 's';
+                drop.style.animationDelay = (-Math.random() * 1.6).toFixed(2) + 's';
+                rainLayer.appendChild(drop);
+            }
+        }
+
+        function flashLightning() {
+            if (!document.body.classList.contains('fx-lightning-on')) return;
+
+            lightningLayer.classList.remove('is-flashing');
+            void lightningLayer.offsetWidth;
+            lightningLayer.classList.add('is-flashing');
+
+            if (Math.random() < 0.45) {
+                setTimeout(function () {
+                    lightningLayer.classList.remove('is-flashing');
+                    void lightningLayer.offsetWidth;
+                    lightningLayer.classList.add('is-flashing');
+                }, 170 + Math.random() * 220);
+            }
+
+            const nextIn = 2100 + Math.random() * 4300;
+            lightningTimeout = setTimeout(flashLightning, nextIn);
+        }
+
+        function stopLightning() {
+            if (lightningTimeout) {
+                clearTimeout(lightningTimeout);
+                lightningTimeout = null;
+            }
+            lightningLayer.classList.remove('is-flashing');
+        }
+
+        rainBtn.addEventListener('click', function () {
+            const nextState = !document.body.classList.contains('fx-rain-on');
+            document.body.classList.toggle('fx-rain-on', nextState);
+            setButtonState(rainBtn, nextState);
+
+            if (nextState) {
+                buildRain();
+            }
+        });
+
+        lightningBtn.addEventListener('click', function () {
+            const nextState = !document.body.classList.contains('fx-lightning-on');
+            document.body.classList.toggle('fx-lightning-on', nextState);
+            setButtonState(lightningBtn, nextState);
+
+            if (nextState) {
+                flashLightning();
+            } else {
+                stopLightning();
+            }
+        });
+
+        darkBtn.addEventListener('click', function () {
+            const nextState = !document.body.classList.contains('fx-dark-on');
+            document.body.classList.toggle('fx-dark-on', nextState);
+            setButtonState(darkBtn, nextState);
+        });
+
+        window.addEventListener('resize', function () {
+            if (document.body.classList.contains('fx-rain-on')) {
+                buildRain();
+            }
+        });
+    }());
+
 });

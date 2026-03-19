@@ -1,10 +1,13 @@
 body {
   width: 100%;
   min-height: 100vh;
+  min-height: 100dvh;
+  height: 100vh;
+  height: 100dvh;
   margin: 0;
   background-color: #9fd7ee;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: hidden;
   background-image:
     linear-gradient(
       180deg,
@@ -19,8 +22,8 @@ body {
       rgba(255, 255, 255, 0) 72%
     ),
     url('../img/the-sky.png');
-  background-size: 100% 100%, 100% 100%, cover;
-  background-position: center top, center bottom, center top;
+  background-size: cover, cover, cover;
+  background-position: center top, center 92%, center top;
   background-repeat: no-repeat;
 }
 .theman {
@@ -1377,6 +1380,128 @@ div.halo {
   transform: scale(1.12) rotate(90deg);
 }
 
+.fx-widget {
+  position: fixed;
+  left: 50%;
+  bottom: 16px;
+  transform: translateX(-50%);
+  z-index: 70;
+  display: flex;
+  gap: 8px;
+  padding: 7px;
+  border-radius: 999px;
+  background: rgba(14, 20, 45, 0.66);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.fx-widget__btn {
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  background: rgba(255, 255, 255, 0.14);
+  color: #f5f5f5;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.fx-widget__btn:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.24);
+}
+
+.fx-widget__btn.is-active {
+  background: linear-gradient(120deg, rgba(106, 63, 145, 0.92), rgba(52, 20, 68, 0.92));
+  box-shadow: 0 0 0 1px rgba(239, 206, 255, 0.45) inset, 0 4px 15px rgba(88, 42, 132, 0.55);
+}
+
+.dark-overlay,
+.rain-layer,
+.lightning-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+.dark-overlay {
+  z-index: 30;
+  opacity: 0;
+  transition: opacity 0.45s ease;
+  background:
+    radial-gradient(circle at 50% 10%, rgba(123, 62, 181, 0.28), rgba(14, 6, 30, 0.65) 58%, rgba(5, 3, 12, 0.85) 100%),
+    linear-gradient(180deg, rgba(37, 22, 55, 0.2), rgba(3, 2, 8, 0.65));
+}
+
+body.fx-dark-on .dark-overlay {
+  opacity: 1;
+}
+
+.rain-layer {
+  z-index: 35;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  overflow: hidden;
+}
+
+body.fx-rain-on .rain-layer {
+  opacity: 0.95;
+}
+
+.rain-drop {
+  position: absolute;
+  top: -12vh;
+  width: 2px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(174, 210, 255, 0.85));
+  border-radius: 30px;
+  animation: rain-fall linear infinite;
+}
+
+.lightning-layer {
+  z-index: 36;
+  opacity: 0;
+}
+
+.lightning-layer.is-flashing {
+  animation: lightning-flash 0.34s ease-out;
+}
+
+@keyframes rain-fall {
+  from {
+    transform: translateY(-12vh) translateX(0);
+  }
+  to {
+    transform: translateY(120vh) translateX(-12px);
+  }
+}
+
+@keyframes lightning-flash {
+  0% {
+    opacity: 0;
+    background: transparent;
+  }
+  16% {
+    opacity: 0.96;
+    background: radial-gradient(circle at 68% 24%, rgba(255, 255, 255, 0.9), rgba(180, 210, 255, 0.25) 34%, rgba(0, 0, 0, 0) 56%);
+  }
+  48% {
+    opacity: 0.08;
+    background: transparent;
+  }
+  72% {
+    opacity: 0.78;
+    background: radial-gradient(circle at 48% 20%, rgba(255, 255, 255, 0.85), rgba(180, 210, 255, 0.22) 34%, rgba(0, 0, 0, 0) 56%);
+  }
+  100% {
+    opacity: 0;
+    background: transparent;
+  }
+}
+
 @media (max-width: 980px) {
   .theman {
     top: 18%;
@@ -1405,6 +1530,20 @@ div.halo {
 }
 
 @media (max-width: 760px) {
+  .fx-widget {
+    width: min(95vw, 430px);
+    justify-content: center;
+    flex-wrap: wrap;
+    bottom: 10px;
+    border-radius: 16px;
+    padding: 8px;
+  }
+
+  .fx-widget__btn {
+    font-size: 11px;
+    padding: 7px 10px;
+  }
+
   .theman {
     top: 16%;
     left: 50%;
@@ -1422,7 +1561,7 @@ div.halo {
   .jesus-chat {
     top: auto;
     right: 10px;
-    bottom: 10px;
+    bottom: 78px;
     width: calc(100vw - 20px);
     border-radius: 14px;
   }
@@ -1453,21 +1592,7 @@ div.halo {
 
 @media (max-width: 480px) {
   body {
-    background-image:
-      linear-gradient(
-        180deg,
-        rgba(12, 32, 64, 0) 36%,
-        rgba(128, 196, 226, 0.42) 62%,
-        rgba(185, 230, 248, 0.96) 100%
-      ),
-      radial-gradient(
-        138% 64% at 50% 102%,
-        rgba(255, 255, 255, 0.5) 0%,
-        rgba(255, 255, 255, 0.18) 44%,
-        rgba(255, 255, 255, 0) 74%
-      ),
-      url('../img/the-sky.png');
-    background-position: center top, center bottom, 54% top;
+    background-position: center top, center 96%, 54% top;
   }
 
   .theman {
@@ -1488,9 +1613,20 @@ div.halo {
   }
 
   .jesus-chat {
-    bottom: 8px;
+    bottom: 84px;
     width: calc(100vw - 16px);
     right: 8px;
+  }
+
+  .fx-widget {
+    gap: 6px;
+    bottom: 8px;
+    width: calc(100vw - 16px);
+  }
+
+  .fx-widget__btn {
+    flex: 1 1 auto;
+    min-width: 96px;
   }
 
   .jesus-chat__header {
