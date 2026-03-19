@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     new Typed('#paragraph', {
-        strings: ["Feliz Semana Santa"],
+        strings: ["Semana Santa"],
         typeSpeed: 200,
         showCursor: false,
         onComplete: function() {
