@@ -1,10 +1,26 @@
 body {
   width: 100%;
-  height: 100%;
-  background: LightBlue;
-  overflow: hidden;
-  background-image: url('../img/the-sky.png'); 
-  background-size: cover;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #9fd7ee;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(12, 32, 64, 0) 42%,
+      rgba(128, 196, 226, 0.34) 67%,
+      rgba(178, 226, 247, 0.9) 100%
+    ),
+    radial-gradient(
+      130% 56% at 50% 100%,
+      rgba(255, 255, 255, 0.42) 0%,
+      rgba(255, 255, 255, 0.14) 44%,
+      rgba(255, 255, 255, 0) 72%
+    ),
+    url('../img/the-sky.png');
+  background-size: 100% 100%, 100% 100%, cover;
+  background-position: center top, center bottom, center top;
   background-repeat: no-repeat;
 }
 .theman {
@@ -1359,4 +1375,167 @@ div.halo {
 .logo-lightbox__close:hover {
   background: rgba(227, 186, 232, 0.35);
   transform: scale(1.12) rotate(90deg);
+}
+
+@media (max-width: 980px) {
+  .theman {
+    top: 18%;
+    margin-left: 18%;
+  }
+
+  .middle-text {
+    left: 50%;
+    top: 48%;
+    font-size: clamp(30px, 7vw, 42px);
+    width: min(90vw, 600px);
+    padding: 0 12px;
+  }
+
+  .logo {
+    top: 18px;
+    left: 18px;
+    width: 104px;
+  }
+
+  .jesus-chat {
+    right: 12px;
+    top: 12px;
+    width: min(330px, calc(100vw - 24px));
+  }
+}
+
+@media (max-width: 760px) {
+  .theman {
+    top: 16%;
+    left: 50%;
+    margin-left: 0;
+    transform: translateX(-50%) scale(0.8);
+    transform-origin: top center;
+    animation: float-mobile 5s ease-in-out infinite, drift-mobile 10s ease-in-out infinite;
+  }
+
+  .middle-text {
+    top: 44%;
+    font-size: clamp(26px, 10vw, 38px);
+  }
+
+  .jesus-chat {
+    top: auto;
+    right: 10px;
+    bottom: 10px;
+    width: calc(100vw - 20px);
+    border-radius: 14px;
+  }
+
+  .jesus-chat__body {
+    max-height: 34vh;
+    padding: 12px;
+  }
+
+  .jesus-chat__bubble {
+    font-size: 13px;
+    line-height: 1.45;
+  }
+
+  .logo {
+    width: 88px;
+    top: 12px;
+    left: 10px;
+  }
+
+  .cloud8,
+  .cloud9,
+  .cloud10,
+  .cloud11 {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(12, 32, 64, 0) 36%,
+        rgba(128, 196, 226, 0.42) 62%,
+        rgba(185, 230, 248, 0.96) 100%
+      ),
+      radial-gradient(
+        138% 64% at 50% 102%,
+        rgba(255, 255, 255, 0.5) 0%,
+        rgba(255, 255, 255, 0.18) 44%,
+        rgba(255, 255, 255, 0) 74%
+      ),
+      url('../img/the-sky.png');
+    background-position: center top, center bottom, 54% top;
+  }
+
+  .theman {
+    top: 20%;
+    transform: translateX(-50%) scale(0.66);
+    animation: float-mobile-sm 5s ease-in-out infinite, drift-mobile-sm 10s ease-in-out infinite;
+  }
+
+  .middle-text {
+    top: 41%;
+    width: 94vw;
+    font-size: clamp(23px, 10.5vw, 33px);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.45);
+  }
+
+  .egg-text {
+    font-size: 12px;
+  }
+
+  .jesus-chat {
+    bottom: 8px;
+    width: calc(100vw - 16px);
+    right: 8px;
+  }
+
+  .jesus-chat__header {
+    font-size: 12px;
+    padding: 7px 10px;
+  }
+
+  .jesus-chat__body {
+    max-height: 31vh;
+    gap: 8px;
+  }
+
+  .jesus-chat__avatar {
+    font-size: 19px;
+  }
+
+  .logo {
+    width: 74px;
+    top: 10px;
+    left: 8px;
+  }
+}
+
+@keyframes float-mobile {
+  0% { transform: translateX(-50%) translateY(0) scale(0.8); }
+  20% { transform: translateX(-50%) translateY(5px) scale(0.8); }
+  50% { transform: translateX(-50%) translateY(-5px) scale(0.8); }
+  100% { transform: translateX(-50%) translateY(0) scale(0.8); }
+}
+
+@keyframes drift-mobile {
+  0% { left: 50%; }
+  50% { left: 47%; }
+  100% { left: 50%; }
+}
+
+@keyframes float-mobile-sm {
+  0% { transform: translateX(-50%) translateY(0) scale(0.66); }
+  20% { transform: translateX(-50%) translateY(5px) scale(0.66); }
+  50% { transform: translateX(-50%) translateY(-5px) scale(0.66); }
+  100% { transform: translateX(-50%) translateY(0) scale(0.66); }
+}
+
+@keyframes drift-mobile-sm {
+  0% { left: 50%; }
+  50% { left: 46.5%; }
+  100% { left: 50%; }
 }
