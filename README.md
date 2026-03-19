@@ -3,7 +3,7 @@
 [![forthebadge](http://forthebadge.com/images/badges/uses-css.svg)](https://www.linkedin.com/in/drphp/)
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](https://www.linkedin.com/in/drphp/)
 
-Landing estática temática de Semana Santa construida con HTML, CSS y JavaScript. El proyecto muestra una ilustración animada, texto tipográfico, un chat con las 7 palabras de Jesús en la cruz y una interacción de lightbox para el logo principal.
+Landing temática de Semana Santa construida con HTML, CSS y JavaScript. El proyecto muestra una ilustración animada, texto tipográfico, un chat con las 7 palabras de Jesús en la cruz y una interacción de lightbox para el logo principal.
 
 [![Video](https://img.youtube.com/vi/vGhcgaP0TcI/0.jpg)](https://www.youtube.com/watch?v=vGhcgaP0TcI)
 
@@ -58,7 +58,6 @@ Puedes abrir `index.html` en el navegador, aunque algunas interacciones y recurs
 - HTML5
 - CSS3
 - JavaScript
-- Typed.js
 
 ## Release actual 📦
 

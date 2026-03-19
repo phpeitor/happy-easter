@@ -3,7 +3,7 @@ body {
   height: 100%;
   background: LightBlue;
   overflow: hidden;
-  background-image: url('../img/the-sky.gif'); 
+  background-image: url('../img/the-sky.png'); 
   background-size: cover;
   background-repeat: no-repeat;
 }
