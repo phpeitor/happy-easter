@@ -16,7 +16,6 @@ Landing temática de Semana Santa construida con HTML, CSS y JavaScript. El proy
 - Texto animado con Typed.js ⌨️.
 - Chat visual con las 7 palabras de Jesús en la cruz 💬.
 - Lightbox para ampliar el logo 🔍.
-- Estructura simple, sin build step ni dependencias de Node ⚡.
 
 ## Estructura del proyecto 🗂️
 
@@ -52,16 +51,6 @@ cd happy-easter
 ### Opción 2: abrir el HTML directamente 🌐
 
 Puedes abrir `index.html` en el navegador, aunque algunas interacciones y recursos suelen comportarse mejor sirviendo el proyecto desde HTTP local.
-
-## Tecnologías 🛠️
-
-- HTML5
-- CSS3
-- JavaScript
-
-## Release actual 📦
-
-La información del release documentado en este proyecto está en [RELEASE.md](RELEASE.md).
 
 ## Licencia 📄
 
