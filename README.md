@@ -31,7 +31,6 @@ happy-easter/
 |-- img/
 |   `-- ...
 |-- README.md
-`-- RELEASE.md
 ```
 
 ## Cómo ejecutar el proyecto 🚀

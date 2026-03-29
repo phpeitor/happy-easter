@@ -36,10 +36,10 @@ body {
   top: 10%;
   width: 400px;
   margin-left: 30%;
-  -webkit-animation: float 5s ease-in-out infinite, drift 10s ease-in-out infinite;
-  -moz-animation: float 5s ease-in-out infinite, drift 10s ease-in-out infinite;
-  -o-animation: float 5s ease-in-out infinite, drift 10s ease-in-out infinite;
-  animation: float 5s ease-in-out infinite, drift 10s ease-in-out infinite;
+  -webkit-animation: float 5s ease-in-out infinite;
+  -moz-animation: float 5s ease-in-out infinite;
+  -o-animation: float 5s ease-in-out infinite;
+  animation: float 5s ease-in-out infinite;
 }
 .thornscrown {
   position: absolute;
@@ -1071,28 +1071,6 @@ div.halo {
     left: -300px;
   }
 }
-@-webkit-keyframes drift {
-  0%   { margin-left: 30%; }
-  50%  { margin-left: 20%; }
-  100% { margin-left: 30%; }
-}
-@-moz-keyframes drift {
-  0%   { margin-left: 30%; }
-  50%  { margin-left: 20%; }
-  100% { margin-left: 30%; }
-}
-@-o-keyframes drift {
-  0%   { margin-left: 30%; }
-  50%  { margin-left: 20%; }
-  100% { margin-left: 30%; }
-}
-@keyframes drift {
-  0%   { margin-left: 30%; }
-  50%  { margin-left: 20%; }
-  100% { margin-left: 30%; }
-}
-
-
 
 .middle-text {
   position: fixed;
@@ -1568,7 +1546,7 @@ body.fx-rain-on .rain-layer {
     margin-left: 0;
     transform: translateX(-50%) scale(0.8);
     transform-origin: top center;
-    animation: float-mobile 5s ease-in-out infinite, drift-mobile 10s ease-in-out infinite;
+    animation: float-mobile 5s ease-in-out infinite;
   }
 
   .middle-text {
@@ -1616,7 +1594,7 @@ body.fx-rain-on .rain-layer {
   .theman {
     top: 20%;
     transform: translateX(-50%) scale(0.66);
-    animation: float-mobile-sm 5s ease-in-out infinite, drift-mobile-sm 10s ease-in-out infinite;
+    animation: float-mobile-sm 5s ease-in-out infinite;
   }
 
   .middle-text {
@@ -1675,11 +1653,6 @@ body.fx-rain-on .rain-layer {
   100% { transform: translateX(-50%) translateY(0) scale(0.8); }
 }
 
-@keyframes drift-mobile {
-  0% { left: 50%; }
-  50% { left: 47%; }
-  100% { left: 50%; }
-}
 
 @keyframes float-mobile-sm {
   0% { transform: translateX(-50%) translateY(0) scale(0.66); }
@@ -1688,8 +1661,3 @@ body.fx-rain-on .rain-layer {
   100% { transform: translateX(-50%) translateY(0) scale(0.66); }
 }
 
-@keyframes drift-mobile-sm {
-  0% { left: 50%; }
-  50% { left: 46.5%; }
-  100% { left: 50%; }
-}
