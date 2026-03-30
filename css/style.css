@@ -1551,14 +1551,22 @@ body.fx-rain-on .rain-layer {
 
   .middle-text {
     top: 44%;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: clamp(26px, 10vw, 38px);
+    width: calc(100vw - 20px);
+    max-width: 100vw;
+    padding: 0 10px;
+    box-sizing: border-box;
   }
 
   .jesus-chat {
     top: auto;
     right: 10px;
+    left: 10px;
     bottom: 78px;
-    width: calc(100vw - 20px);
+    width: auto;
+    max-width: none;
     border-radius: 14px;
   }
 
@@ -1578,6 +1586,13 @@ body.fx-rain-on .rain-layer {
     left: 10px;
   }
 
+  .cloud1,
+  .cloud2,
+  .cloud3,
+  .cloud4,
+  .cloud5,
+  .cloud6,
+  .cloud7,
   .cloud8,
   .cloud9,
   .cloud10,
@@ -1589,19 +1604,26 @@ body.fx-rain-on .rain-layer {
 @media (max-width: 480px) {
   body {
     background-position: center top, center 96%, 54% top;
+    padding: 0;
+    margin: 0;
   }
 
   .theman {
     top: 20%;
+    left: 50%;
     transform: translateX(-50%) scale(0.66);
     animation: float-mobile-sm 5s ease-in-out infinite;
   }
 
   .middle-text {
     top: 41%;
-    width: 94vw;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100vw - 16px);
     font-size: clamp(23px, 10.5vw, 33px);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.45);
+    box-sizing: border-box;
+    padding: 0 8px;
   }
 
   .egg-text {
@@ -1610,14 +1632,20 @@ body.fx-rain-on .rain-layer {
 
   .jesus-chat {
     bottom: 84px;
-    width: calc(100vw - 16px);
+    left: 8px;
     right: 8px;
+    width: auto;
+    max-width: none;
   }
 
   .fx-widget {
     gap: 6px;
     bottom: 8px;
-    width: calc(100vw - 16px);
+    left: 8px;
+    right: 8px;
+    width: auto;
+    max-width: none;
+    transform: none;
   }
 
   .fx-widget__btn {
