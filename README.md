@@ -5,9 +5,9 @@
 
 Landing temática de Semana Santa construida con HTML, CSS y JavaScript. El proyecto muestra una ilustración animada, texto tipográfico, un chat con las 7 palabras de Jesús en la cruz y una interacción de lightbox para el logo principal.
 
-[![Video](https://img.youtube.com/vi/D__8YC5yuts/0.jpg)](https://www.youtube.com/watch?v=D__8YC5yuts)
+[![Video](https://img.youtube.com/vi/iUylQIiH-us/0.jpg)](https://www.youtube.com/watch?v=iUylQIiH-us)
 
-[▶ Ver demo en YouTube](https://www.youtube.com/watch?v=D__8YC5yuts)
+[▶ Ver demo en YouTube](https://www.youtube.com/watch?v=iUylQIiH-us)
 
 ## Características 🎨
 
@@ -60,14 +60,6 @@ El sitio incluye varios efectos visuales que se pueden activar/desactivar con lo
 - **Lluvia** 🌧️: Animación de gotas cayendo en la pantalla.
 - **Relámpagos** ⚡: Destellos visuales aleatorios.
 - **Modo Oscuro** 🌙: Overlay oscuro con gradiente para una experiencia nocturna.
-
-## Tecnologías Utilizadas 🛠️
-
-- **HTML5**: Estructura semántica del proyecto.
-- **CSS3**: Estilos, animaciones, gradientes y efectos visuales.
-- **JavaScript**: Interactividad, animaciones con Typed.js y control de efectos.
-- **jQuery**: Manipulación del DOM simplificada.
-- **Typed.js**: Animación de escritura de texto con cursor.
 
 ## Cómo ejecutar el proyecto 🚀
 
